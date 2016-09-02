@@ -14,21 +14,23 @@
 #include <ESP8266TelegramBOT.h>
 
 
-const int LED_OK = D7;
+#include "credentials.h"
+
+const int LED_OK = D7;		#IMPORTANTE, sino pones la D no funciona, poner siempre D7 no 7
 const int BUTTON = D4;
 
 // Initialize Wifi connection to the router
-const char* ssid = "WIFI";
-const char* password = "pass";
+const char* ssid = SSID_WIFI;
+const char* password = PASS_WIFI;
 
 
 
 // Initialize Telegram BOT
-#define BOTtoken "API"  //token of TestBOT
-#define BOTname "Avisos_Yayo"
-#define BOTusername "avisos_yayo_bot"
+#define BOTtoken API_BOT  //token of TestBOT
+#define BOTname NAME_BOT
+#define BOTusername ALIAS_BOT
 TelegramBOT bot(BOTtoken, BOTname, BOTusername);
-const char* user_tg = "USER";
+const char* user_tg = ID_TELEGRAM;
 int Bot_mtbs = 100; //mean time between scan messages
 long Bot_lasttime;   //last time messages' scan has been done
 
