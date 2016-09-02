@@ -16,7 +16,7 @@
 
 #include "credentials.h"
 
-const int LED_OK = D7;		#IMPORTANTE, sino pones la D no funciona, poner siempre D7 no 7
+const int LED_OK = D7;		//IMPORTANTE, sino pones la D no funciona, poner siempre D7 no 7
 const int BUTTON = D4;
 
 // Initialize Wifi connection to the router
